@@ -146,6 +146,7 @@ function defineDataTypeMap() {
     dataTypesMap.set('longblob', {type: 'string'})
     dataTypesMap.set('longtext', {type: 'string'})
     dataTypesMap.set('enum', {type: 'object'})
+    dataTypesMap.set('bit', {type: 'boolean'})
 
     return dataTypesMap
 }

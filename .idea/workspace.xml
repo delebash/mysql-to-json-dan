@@ -2,28 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c2315ab-30d5-412f-8e32-bec29ea47891" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/customers.js" beforeDir="false" afterPath="$PROJECT_DIR$/output/customers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/employee_privileges.js" beforeDir="false" afterPath="$PROJECT_DIR$/output/employee_privileges.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/employees.js" beforeDir="false" afterPath="$PROJECT_DIR$/output/employees.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/inventory_transaction_types.js" beforeDir="false" afterPath="$PROJECT_DIR$/output/inventory_transaction_types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/inventory_transactions.js" beforeDir="false" afterPath="$PROJECT_DIR$/output/inventory_transactions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/invoices.js" beforeDir="false" afterPath="$PROJECT_DIR$/output/invoices.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/order_details.js" beforeDir="false" afterPath="$PROJECT_DIR$/output/order_details.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/order_details_status.js" beforeDir="false" afterPath="$PROJECT_DIR$/output/order_details_status.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/orders.js" beforeDir="false" afterPath="$PROJECT_DIR$/output/orders.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/orders_status.js" beforeDir="false" afterPath="$PROJECT_DIR$/output/orders_status.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/orders_tax_status.js" beforeDir="false" afterPath="$PROJECT_DIR$/output/orders_tax_status.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/privileges.js" beforeDir="false" afterPath="$PROJECT_DIR$/output/privileges.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/output/products.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/purchase_order_details.js" beforeDir="false" afterPath="$PROJECT_DIR$/output/purchase_order_details.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/purchase_order_status.js" beforeDir="false" afterPath="$PROJECT_DIR$/output/purchase_order_status.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/purchase_orders.js" beforeDir="false" afterPath="$PROJECT_DIR$/output/purchase_orders.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/sales_reports.js" beforeDir="false" afterPath="$PROJECT_DIR$/output/sales_reports.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/shippers.js" beforeDir="false" afterPath="$PROJECT_DIR$/output/shippers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/strings.js" beforeDir="false" afterPath="$PROJECT_DIR$/output/strings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/suppliers.js" beforeDir="false" afterPath="$PROJECT_DIR$/output/suppliers.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="182" column="41" selection-start-line="182" selection-start-column="41" selection-end-line="182" selection-end-column="41" />
+            <state relative-caret-position="185">
+              <caret line="137" column="38" lean-forward="true" selection-start-line="137" selection-start-column="38" selection-end-line="137" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -59,8 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/output/customers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="49" column="7" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
+            <state relative-caret-position="184">
+              <caret line="54" column="17" lean-forward="true" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -241,24 +221,32 @@
       <workItem from="1555731648101" duration="10833000" />
       <workItem from="1555875460717" duration="3825000" />
       <workItem from="1555904387843" duration="159000" />
-      <workItem from="1555906351418" duration="22628000" />
+      <workItem from="1555906351418" duration="23702000" />
     </task>
+    <task id="LOCAL-00001" summary="fixed mapping parser">
+      <created>1555931374348</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1555931374348</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86945000" />
+    <option name="totallyTimeSpent" value="88019000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24281392" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24281392" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="DB Browser" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2611367" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2611367" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39938557" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -280,18 +268,24 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="fixed mapping parser" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed mapping parser" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/index.js</url>
-          <line>183</line>
+          <line>184</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="207" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/index.js</url>
-          <line>190</line>
+          <line>191</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="208" />
         </line-breakpoint>
@@ -414,15 +408,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/output/customers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="49" column="7" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
+        <state relative-caret-position="184">
+          <caret line="54" column="17" lean-forward="true" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="182" column="41" selection-start-line="182" selection-start-column="41" selection-end-line="182" selection-end-column="41" />
+        <state relative-caret-position="185">
+          <caret line="137" column="38" lean-forward="true" selection-start-line="137" selection-start-column="38" selection-end-line="137" selection-end-column="38" />
         </state>
       </provider>
     </entry>
