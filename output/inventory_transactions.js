@@ -35,103 +35,39 @@ let schema = {
     properties: {
     // !code: schema_properties
   id: {
-    type: 'ID',
-    format: undefined,
-    pattern: undefined,
-    maxLength: undefined,
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    type: 'ID'
   },
   transaction_type: {
     type: 'number',
-    format: undefined,
-    pattern: undefined,
-    maxLength: '',
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    maxLength: 4
   },
   transaction_created_date: {
     type: 'string',
-    format: 'date-time',
-    pattern: undefined,
-    maxLength: '',
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    format: 'date-time'
   },
   transaction_modified_date: {
     type: 'string',
-    format: 'date-time',
-    pattern: undefined,
-    maxLength: '',
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    format: 'date-time'
   },
   product_id: {
     type: 'number',
-    format: undefined,
-    pattern: undefined,
-    maxLength: '',
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    maxLength: 11
   },
   quantity: {
     type: 'number',
-    format: undefined,
-    pattern: undefined,
-    maxLength: '',
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    maxLength: 11
   },
   purchase_order_id: {
     type: 'number',
-    format: undefined,
-    pattern: undefined,
-    maxLength: '',
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    maxLength: 11
   },
   customer_order_id: {
     type: 'number',
-    format: undefined,
-    pattern: undefined,
-    maxLength: '',
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    maxLength: 11
   },
   comments: {
     type: 'string',
-    format: undefined,
-    pattern: undefined,
-    maxLength: '',
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    maxLength: 255
   }
     // !end
     },

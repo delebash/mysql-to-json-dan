@@ -33,59 +33,22 @@ let schema = {
     properties: {
     // !code: schema_properties
   group_by: {
-    type: 'ID',
-    format: undefined,
-    pattern: undefined,
-    maxLength: undefined,
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    type: 'ID'
   },
   display: {
     type: 'string',
-    format: undefined,
-    pattern: undefined,
-    maxLength: '',
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    maxLength: 50
   },
   title: {
     type: 'string',
-    format: undefined,
-    pattern: undefined,
-    maxLength: '',
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    maxLength: 50
   },
   filter_row_source: {
-    type: 'string',
-    format: undefined,
-    pattern: undefined,
-    maxLength: '',
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    type: 'string'
   },
   default: {
     type: 'number',
-    format: undefined,
-    pattern: undefined,
-    maxLength: '',
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    maxLength: 1
   }
     // !end
     },

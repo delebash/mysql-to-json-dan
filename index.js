@@ -67,7 +67,7 @@ async function convertToJsonSchema(schema) {
 
 function getFieldLength(fType) {
     let fieldType = fType;
-    let fieldLength = '';
+    let fieldLength = undefined;
     if (fieldType) {
         if (fieldType.includes('(')) {
             let init = fieldType.indexOf('(');
@@ -80,10 +80,12 @@ function getFieldLength(fType) {
 
 function getFieldProperties(type, key) {
     // ("null", "boolean", "object", "array", "number", or "string")
-    let mapDataType, pattern, format,
-        maxLength, minLength, maximum, minimum, exclusiveMaximum, exclusiveMinimum
+    let mapDataType, pattern = undefined, format = undefined,
+        maxLength = undefined, minLength = undefined, maximum = undefined,
+        minimum = undefined, exclusiveMaximum = undefined, exclusiveMinimum = undefined
     let objField = {};
     if (type) {
+        maxLength = getFieldLength(type);
         if (type.includes('(')) {
             type = type.substr(0, type.indexOf("("));
         }
@@ -94,22 +96,18 @@ function getFieldProperties(type, key) {
 
         if (key === 'PRI') {
             type = 'ID'
-        }else{
-            maxLength = getFieldLength(type);
+            maxLength = undefined;
         }
-
-
-
-        objField.type = type
-        objField.format = format
-        objField.pattern = pattern
-        objField.maxLength = maxLength
-        objField.minLength = minLength
-        objField.maximum = maximum
-        objField.minimum = minimum
-        objField.exclusiveMaximum  = exclusiveMaximum
-        objField.exclusiveMinimum = exclusiveMinimum
-
+// if(typeof num1 == 'number'
+        objField.type = type;
+        format === undefined ? '' : objField.format = format
+        pattern === undefined ? '' : objField.pattern = pattern
+        maxLength === undefined ? '' : objField.maxLength = parseInt(maxLength)
+        minLength === undefined ? '' : objField.minLength = parseInt(minLength)
+        minimum === undefined || '' ? '' : objField.minimum = parseInt(minimum)
+        exclusiveMaximum === undefined ? '' : objField.exclusiveMaximum = parseInt(exclusiveMaximum)
+        exclusiveMinimum === undefined || '' ? '' : objField.exclusiveMinimum = parseInt(exclusiveMinimum)
+        maximum === undefined ? '' : objField.maximum = parseInt(maximum)
 
         return objField;
     }
@@ -160,29 +158,30 @@ function CreateFileWithContent(tableName, schema, outputDir) {
     let arrayRequired = [];
 
     Object.keys(fields).forEach(function (key) {
-        let fieldName, fieldLength, fieldType, fieldNull, fieldKey, fieldDefault, field
-            let objFieldProperties ={};
+        let fieldName, fieldLength, fieldType, fieldNull, fieldKey, fieldDefault, fieldExtra, field
+        let objFieldProperties = {};
 
         field = fields[key];
 
         if (field) {
-            if (field.Type) {
-                fieldName = field.Field;
-                objFieldProperties = getFieldProperties(field.Type, field.Key);
-                fieldNull = field.Null;
-                fieldKey = field.Key;
-                fieldDefault = field.Default;
-                fieldExtra = field.Extra;
+            fieldName = field.Field;
+            objFieldProperties = getFieldProperties(field.Type, field.Key);
+            fieldNull = field.Null;
+            fieldKey = field.Key;
+            fieldDefault = field.Default;
+            fieldExtra = field.Extra;
 
-                objProp[field.Field] = objFieldProperties
+            objProp[field.Field] = objFieldProperties
 
-                // console.log('Tabkename =  ' + tableName + '  Field name =  ' + fieldName + ' Field type= ' + fieldType + "  Field length= " + fieldLength + "  Field null= " + fieldNull + "  Field key= " + fieldKey + "  Field default= " + fieldDefault + "  Field extra= " + fieldExtra);
-                if (fieldNull === true) {
-                    arrayRequired.push(fieldName)
-                }
+            // console.log('Tabkename =  ' + tableName + '  Field name =  ' + fieldName + ' Field type= ' + fieldType + "  Field length= " + fieldLength + "  Field null= " + fieldNull + "  Field key= " + fieldKey + "  Field default= " + fieldDefault + "  Field extra= " + fieldExtra);
+            if (fieldNull === true) {
+                arrayRequired.push(fieldName)
             }
         }
     });
+
+    //Not sure why it is adding undefined
+    delete objProp.undefined
 
     let properties = stringifyObject(objProp, {
         indent: '  ',

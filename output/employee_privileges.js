@@ -29,26 +29,10 @@ let schema = {
     properties: {
     // !code: schema_properties
   employee_id: {
-    type: 'ID',
-    format: undefined,
-    pattern: undefined,
-    maxLength: undefined,
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    type: 'ID'
   },
   privilege_id: {
-    type: 'ID',
-    format: undefined,
-    pattern: undefined,
-    maxLength: undefined,
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    type: 'ID'
   }
     // !end
     },

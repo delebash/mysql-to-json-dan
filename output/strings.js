@@ -31,26 +31,11 @@ let schema = {
     properties: {
     // !code: schema_properties
   string_id: {
-    type: 'ID',
-    format: undefined,
-    pattern: undefined,
-    maxLength: undefined,
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    type: 'ID'
   },
   string_data: {
     type: 'string',
-    format: undefined,
-    pattern: undefined,
-    maxLength: '',
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    maxLength: 255
   }
     // !end
     },

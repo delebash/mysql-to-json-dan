@@ -33,92 +33,35 @@ let schema = {
     properties: {
     // !code: schema_properties
   id: {
-    type: 'ID',
-    format: undefined,
-    pattern: undefined,
-    maxLength: undefined,
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    type: 'ID'
   },
   purchase_order_id: {
     type: 'number',
-    format: undefined,
-    pattern: undefined,
-    maxLength: '',
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    maxLength: 11
   },
   product_id: {
     type: 'number',
-    format: undefined,
-    pattern: undefined,
-    maxLength: '',
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    maxLength: 11
   },
   quantity: {
     type: 'number',
-    format: undefined,
-    pattern: undefined,
-    maxLength: '',
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    maxLength: 18
   },
   unit_cost: {
     type: 'number',
-    format: undefined,
-    pattern: undefined,
-    maxLength: '',
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    maxLength: 19
   },
   date_received: {
     type: 'string',
-    format: 'date-time',
-    pattern: undefined,
-    maxLength: '',
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    format: 'date-time'
   },
   posted_to_inventory: {
     type: 'number',
-    format: undefined,
-    pattern: undefined,
-    maxLength: '',
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    maxLength: 1
   },
   inventory_id: {
     type: 'number',
-    format: undefined,
-    pattern: undefined,
-    maxLength: '',
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    maxLength: 11
   }
     // !end
     },

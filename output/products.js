@@ -41,158 +41,56 @@ let schema = {
     properties: {
     // !code: schema_properties
   supplier_ids: {
-    type: 'string',
-    format: undefined,
-    pattern: undefined,
-    maxLength: '',
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    type: 'string'
   },
   id: {
-    type: 'ID',
-    format: undefined,
-    pattern: undefined,
-    maxLength: undefined,
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    type: 'ID'
   },
   product_code: {
     type: 'string',
-    format: undefined,
-    pattern: undefined,
-    maxLength: '',
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    maxLength: 25
   },
   product_name: {
     type: 'string',
-    format: undefined,
-    pattern: undefined,
-    maxLength: '',
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    maxLength: 50
   },
   description: {
-    type: 'string',
-    format: undefined,
-    pattern: undefined,
-    maxLength: '',
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    type: 'string'
   },
   standard_cost: {
     type: 'number',
-    format: undefined,
-    pattern: undefined,
-    maxLength: '',
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    maxLength: 19
   },
   list_price: {
     type: 'number',
-    format: undefined,
-    pattern: undefined,
-    maxLength: '',
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    maxLength: 19
   },
   reorder_level: {
     type: 'number',
-    format: undefined,
-    pattern: undefined,
-    maxLength: '',
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    maxLength: 11
   },
   target_level: {
     type: 'number',
-    format: undefined,
-    pattern: undefined,
-    maxLength: '',
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    maxLength: 11
   },
   quantity_per_unit: {
     type: 'string',
-    format: undefined,
-    pattern: undefined,
-    maxLength: '',
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    maxLength: 50
   },
   discontinued: {
     type: 'number',
-    format: undefined,
-    pattern: undefined,
-    maxLength: '',
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    maxLength: 1
   },
   minimum_reorder_quantity: {
     type: 'number',
-    format: undefined,
-    pattern: undefined,
-    maxLength: '',
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    maxLength: 11
   },
   category: {
     type: 'string',
-    format: undefined,
-    pattern: undefined,
-    maxLength: '',
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    maxLength: 50
   },
   attachments: {
-    type: 'string',
-    format: undefined,
-    pattern: undefined,
-    maxLength: '',
-    minLength: undefined,
-    maximum: undefined,
-    minimum: undefined,
-    exclusiveMaximum: undefined,
-    exclusiveMinimum: undefined
+    type: 'string'
   }
     // !end
     },
