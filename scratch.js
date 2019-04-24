@@ -1,4 +1,3 @@
-
 // ejs.renderFile(join(__dirname, './template.ejs'), {properties:properties,required:required,schema:schema}, options, (err, result) => {
 //     // locals.f = flatten
 //     if (err) {
@@ -16,8 +15,6 @@
 // });
 
 
-
-
 // const CreateFileWithContent = (fileName, content, outputFolder) => {
 //     var logger = fs.createWriteStream(`${outputFolder}/${fileName}.json`, {
 //         flags: 'w' // 'a' means appending (old data will be preserved)
@@ -25,8 +22,6 @@
 //     logger.write(JSON.stringify(content, null, 4));
 //     logger.end();
 // }
-
-
 
 
 //
@@ -42,9 +37,6 @@
 // const required  = stringifyObject(schema.required
 
 
-
-
-
 // const CreateFileWithContent = (fileName, content, outputFolder) => {
 //     var logger = fs.createWriteStream(`${outputFolder}/${fileName}.json`, {
 //         flags: 'w' // 'a' means appending (old data will be preserved)
@@ -52,7 +44,6 @@
 //     logger.write(JSON.stringify(content, null, 4));
 //     logger.end();
 // }
-
 
 
 // caching map
@@ -63,7 +54,6 @@
 //         // do something with an item
 //         console.log(key, item);
 //     });
-
 
 
 // caching map
@@ -135,7 +125,6 @@
 //
 //     };
 // });
-
 
 
 //console.log(properties)

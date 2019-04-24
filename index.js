@@ -9,7 +9,7 @@ const connection = mysql.CreateConnection({
     user: 'root',
     password: 'test12345',
     host: 'localhost',
-    database: 'northwind'
+    database: 'shelter_ops'
 });
 const dataTypesMap = defineDataTypeMap()
 
@@ -147,11 +147,14 @@ function defineDataTypeMap() {
     dataTypesMap.set('longtext', {type: 'string'})
     dataTypesMap.set('enum', {type: 'object'})
     dataTypesMap.set('bit', {type: 'boolean'})
+    dataTypesMap.set('point', {type: 'number'})
 
     return dataTypesMap
 }
 
 function CreateFileWithContent(tableName, schema, outputDir) {
+
+    !fs.existsSync(outputDir) && fs.mkdirSync(outputDir);
 
     let fields = schema.fields;
     let objProp = {};

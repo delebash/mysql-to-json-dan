@@ -3,7 +3,7 @@ const fs = require('fs');
 const lodash = require('lodash');
 
 const GetSchema = (connection) => {
-    const schema = { type: 'mysql', tables: {} };
+    const schema = {type: 'mysql', tables: {}};
 
     return (
         new Promise(function (resolve, reject) {
@@ -17,7 +17,11 @@ const GetSchema = (connection) => {
                                 .then((fields) => {
                                     fields.forEach((field, index, array) => {
                                         if (!schema.tables[tableName]) {
-                                            schema.tables[tableName] = { fields: [], relationsFromTable: [], relationsToTable: [] };
+                                            schema.tables[tableName] = {
+                                                fields: [],
+                                                relationsFromTable: [],
+                                                relationsToTable: []
+                                            };
                                         }
                                         schema.tables[tableName].fields.push(field);
                                     });
@@ -58,8 +62,8 @@ const GetFieldsFromTable = (connection, table) => {
                     reject(err);
                 }
                 rows.forEach((value, index, array) => {
-                    const { Field, Type, Null, Key, Default, Extra } = value; // Extract info
-                    fields.push({ Field, Type, Null: (Null === 'YES'), Key, Default, Extra });
+                    const {Field, Type, Null, Key, Default, Extra} = value; // Extract info
+                    fields.push({Field, Type, Null: (Null === 'YES'), Key, Default, Extra});
                 });
                 console.log(this.sql);
                 resolve(fields);
@@ -69,8 +73,8 @@ const GetFieldsFromTable = (connection, table) => {
 }
 
 const CreateConnection = (args = {}) => {
-    const { user, password, host, database, multipleStatements = true } = args;
-    const connection = mysql.createConnection({ user, password, host, database, multipleStatements });
+    const {user, password, host, database, multipleStatements = true} = args;
+    const connection = mysql.createConnection({user, password, host, database, multipleStatements});
     return connection;
 }
 
@@ -99,7 +103,7 @@ const AddRelationsToSchema = (connection, schema) => {
                     GetRelationsFromTable(connection, tableName)
                         .then((relationsFromTable) => {
                             if (!schema.tables[tableName]) {
-                                schema.tables[tableName] = { fields: [], relationsFromTable: [], relationsToTable: [] };
+                                schema.tables[tableName] = {fields: [], relationsFromTable: [], relationsToTable: []};
                             }
 
                             schema.tables[tableName].relationsFromTable = schema.tables[tableName].relationsFromTable.concat(relationsFromTable);
@@ -156,8 +160,8 @@ const GetRelationsFromTable = (connection, table) => {
                     reject(err);
                 }
                 relationsResp.forEach((value, index, array) => {
-                    const { db, t1, t1Field, db2, t2, t2Field } = value; // Extract info
-                    relations.push({ localField: t1Field, foreignTable: t2, foreignField: t2Field });
+                    const {db, t1, t1Field, db2, t2, t2Field} = value; // Extract info
+                    relations.push({localField: t1Field, foreignTable: t2, foreignField: t2Field});
                 });
                 resolve(relations);
             });
@@ -187,8 +191,8 @@ const GetRelationsToTable = (connection, table) => {
                     reject(err);
                 }
                 relationsResp.forEach((value, index, array) => {
-                    const { db, t1, t1Field, db2, t2, t2Field } = value; // Extract info
-                    relations.push({ localField: t2Field, foreignTable: t1, foreignField: t1Field });
+                    const {db, t1, t1Field, db2, t2, t2Field} = value; // Extract info
+                    relations.push({localField: t2Field, foreignTable: t1, foreignField: t1Field});
                 });
                 resolve(relations);
             });
@@ -227,7 +231,7 @@ const ExportSchemaToFiles = (args = {}) => {
     connection.connect();
     return GetSchema(connection)
         .then((schema) => {
-            const { extractRelations = true, discoverRelations = false, aliases = [], ignoreDefaultNames = false, prefix = 'id_', sufix = '_id' } = args;
+            const {extractRelations = true, discoverRelations = false, aliases = [], ignoreDefaultNames = false, prefix = 'id_', sufix = '_id'} = args;
             if (args.discoverRelations) {
                 schema = AddRelationsByFieldNameToSchema(schema, aliases, ignoreDefaultNames, prefix, sufix);
             }
@@ -263,7 +267,7 @@ const ExportSchemaToFile = (args = {}) => {
 
     return GetSchema(connection)
         .then((schema) => {
-            const { extractRelations = true, discoverRelations = false, aliases = [], ignoreDefaultNames = false, prefix = 'id_', sufix = '_id' } = args;
+            const {extractRelations = true, discoverRelations = false, aliases = [], ignoreDefaultNames = false, prefix = 'id_', sufix = '_id'} = args;
             if (args.discoverRelations) {
                 schema = AddRelationsByFieldNameToSchema(schema, aliases, ignoreDefaultNames, prefix, sufix);
             }
@@ -422,7 +426,11 @@ const GetRelationsToTableByFieldNames = (tableName, schema, aliases = [], ignore
                     p.foreignTable === currTableName &&
                     p.foreignField === fields[possible].Field);
 
-            (relationExists < 0) && relations.push({ localField: key, foreignTable: currTableName, foreignField: fields[possible].Field });
+            (relationExists < 0) && relations.push({
+                localField: key,
+                foreignTable: currTableName,
+                foreignField: fields[possible].Field
+            });
 
             const inverseRelationExists = lodash.findIndex(schema.tables[currTableName].relationsFromTable,
                 (p) => p.localField === fields[possible].Field &&

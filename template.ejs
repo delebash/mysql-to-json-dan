@@ -1,10 +1,11 @@
-// Define the Feathers schema for service <% var service =  title.toLowerCase() %>'<%- service -%>'. (Can be re-generated.)
+// Define the Feathers schema for service <% var service = title.toLowerCase() %>'<%- service -%>'. (Can be re-generated.)
 // !code: imports // !end
 // !code: init // !end
 
 // Define the model using JSON-schema
 let schema = {
-// !<DEFAULT> code: schema_header
+// !
+<DEFAULT> code: schema_header
     title: '<%- serviceName -%>',
     description: '<%- title -%> database.',
 
@@ -59,7 +60,8 @@ let schema = {
     // !end
     ],
     add: {
-    // !<DEFAULT> code: graphql_add
+    // !
+    <DEFAULT> code: graphql_add
         // __author__: { type: '__User__!', args: false, relation: { ourTable: '__authorId__', otherTable: 'id' } },
 
         // !end

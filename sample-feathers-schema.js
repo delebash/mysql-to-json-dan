@@ -1,4 +1,3 @@
-
 // Define the Feathers schema for service `animals`. (Can be re-generated.)
 // !code: imports // !end
 // !code: init // !end
@@ -25,7 +24,7 @@ let schema = {
     // Fields in the model.
     properties: {
         // !code: schema_properties
-        id: { type: 'ID' },
+        id: {type: 'ID'},
         name: {}
         // !end
     },
@@ -39,7 +38,7 @@ let extensions = {
         // !code: graphql_header
         name: 'Animal',
         service: {
-            sort: { id: 1 },
+            sort: {id: 1},
         },
         // sql: {
         //   sqlTable: 'Animals',
