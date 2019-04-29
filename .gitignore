@@ -6,7 +6,7 @@
 .idea
 *.iml
 out
-gen
+/.idea
 node_modules
 output
 .gitignore
