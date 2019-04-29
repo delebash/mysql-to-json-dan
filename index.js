@@ -113,13 +113,6 @@ function getFieldProperties(type, key) {
     }
 }
 
-//number, integer, string, boolean, array, object or null
-// bigCities.set(d.city, {"population": +d.pop, "latitude": +d.lat, "longitude": +d.lng});
-// let info = bigCities.get(d.city);
-// console.log(info.population);
-// console.log(info.latitude);
-// console.log(info.longitude);
-function defineDataTypeMap() {
     let dataTypesMap = new Map();
 
     dataTypesMap.set('int', {type: 'number'})
@@ -177,7 +170,6 @@ function CreateFileWithContent(tableName, schema, outputDir) {
 
             objProp[field.Field] = objFieldProperties
 
-            // console.log('Tabkename =  ' + tableName + '  Field name =  ' + fieldName + ' Field type= ' + fieldType + "  Field length= " + fieldLength + "  Field null= " + fieldNull + "  Field key= " + fieldKey + "  Field default= " + fieldDefault + "  Field extra= " + fieldExtra);
             if (fieldNull === true) {
                 arrayRequired.push(fieldName)
             }
