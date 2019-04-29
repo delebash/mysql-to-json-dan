@@ -17,7 +17,6 @@ let options = {
     output: './output'
 };
 
-
 connection.connect();
 mysql.GetSchemaWithRelations(connection)
     .then((schema) => {
@@ -51,9 +50,7 @@ mysql.GetSchemaWithRelations(connection)
         }
     );
 
-
 async function convertToJsonSchema(schema) {
-
 
     const tables = schema.tables;
     const tableNames = Object.keys(tables);
@@ -79,7 +76,6 @@ function getFieldLength(fType) {
 }
 
 function getFieldProperties(type, key) {
-    // ("null", "boolean", "object", "array", "number", or "string")
     let mapDataType, pattern = undefined, format = undefined,
         maxLength = undefined, minLength = undefined, maximum = undefined,
         minimum = undefined, exclusiveMaximum = undefined, exclusiveMinimum = undefined
@@ -98,7 +94,6 @@ function getFieldProperties(type, key) {
             type = 'ID'
             maxLength = undefined;
         }
-// if(typeof num1 == 'number'
         objField.type = type;
         format === undefined ? '' : objField.format = format
         pattern === undefined ? '' : objField.pattern = pattern
@@ -113,6 +108,7 @@ function getFieldProperties(type, key) {
     }
 }
 
+function defineDataTypeMap() {
     let dataTypesMap = new Map();
 
     dataTypesMap.set('int', {type: 'number'})
@@ -170,13 +166,12 @@ function CreateFileWithContent(tableName, schema, outputDir) {
 
             objProp[field.Field] = objFieldProperties
 
-            if (fieldNull === true) {
+            if (fieldNull === false) {
                 arrayRequired.push(fieldName)
             }
         }
     });
 
-    //Not sure why it is adding undefined
     delete objProp.undefined
 
     let properties = stringifyObject(objProp, {
@@ -189,9 +184,7 @@ function CreateFileWithContent(tableName, schema, outputDir) {
         singleQuotes: true
     }).substr(1).slice(0, -1);
 
-
     const filepath = join(outputDir, tableName + '.js');
-
     let title = tableName.charAt(0).toUpperCase() + tableName.slice(1);
     let serviceName = pluralize.singular(title); //=> "single"
     ejs.renderFile(join(__dirname, './template.ejs'), {
